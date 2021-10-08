@@ -1,9 +1,9 @@
 # Morr-Internship-Task
 
-Details - Contact book 
-Develop a suite of CRUD APIs for a contact book app
-Each contact should have a unique email address
-APIs should support adding/editing/deleting contacts
+Details - Contact book  
+Develop a suite of CRUD APIs for a contact book app  
+Each contact should have a unique email address  
+APIs should support adding/editing/deleting contacts  
 Done using flask,Xampp 
 
 # GET
