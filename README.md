@@ -1,10 +1,10 @@
 # Morr-Internship-Task
 
-## Details - Contact book 
-## Develop a suite of CRUD APIs for a contact book app
-## Each contact should have a unique email address
-## APIs should support adding/editing/deleting contacts
-## Done using flask,Xampp 
+Details - Contact book 
+Develop a suite of CRUD APIs for a contact book app
+Each contact should have a unique email address
+APIs should support adding/editing/deleting contacts
+Done using flask,Xampp 
 
 # GET
 ![GET](https://user-images.githubusercontent.com/67327058/114217109-60488e80-9985-11eb-85c1-7533e421c33f.png)
