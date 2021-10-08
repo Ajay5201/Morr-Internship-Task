@@ -25,17 +25,17 @@ class Contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200))
     email = db.Column(db.String(100))
-    phno = db.Column(db.String(10))
+    phone_number = db.Column(db.String(10))
 
     def create(self):
         db.session.add(self)
         db.session.commit()
         return self
 
-    def _init_(self, name, email, phno):
+    def _init_(self, name, email, phone_number):
         self.name = name
         self.email = email
-        self.phno = phno
+        self.phone_number = phone_number
 
 
 db.create_all()
@@ -49,7 +49,7 @@ class ContactSchema(ModelSchema):
     id = fields.Number(dump_only=True)
     name = fields.String(required=True)
     email = fields.String(required=True)
-    phno = fields.String(required=True)
+    phone_number = fields.String(required=True)
 
 
 @app.route("/api/contact", methods=["GET"])
@@ -88,11 +88,11 @@ def update_contact_by_id(id):
         get_Contact.name = data["name"]
     if data.get("email"):
         get_Contact.email = data["email"]
-    if data.get("phno"):
-        get_Contact.phno = data["phno"]
+    if data.get("phone_number"):
+        get_Contact.phone_number = data["phone_number"]
     db.session.add(get_Contact)
     db.session.commit()
-    contact_schema = ContactSchema(only=["id", "name", "email", "phno"])
+    contact_schema = ContactSchema(only=["id", "name", "email", "phone_number"])
     contacts = contact_schema.dump(get_Contact)
     return make_response(jsonify({"contact": contacts}))
 
